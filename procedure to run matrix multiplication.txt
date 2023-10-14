@@ -1,0 +1,12 @@
+1.Create a folder with name of your choice in the local file system.
+2.Now open terminal and set directory to the previously created directory.
+3.Now create the 3 documents(input.txt,mapper.py,reducer.py).
+4.Now write the input of your choice in the input.txt
+5.now create a directory in HDFS using hadoop command.
+6.Now copy the input text file into HDFS using 'PUT' command.
+7.Now find the hadoop streaming jar file using the command "find / -name 'hadoop-streaming*.jar'
+8.Now five mapper and reducer to their respective functions using the code along with assigning the path to output and input file
+ 
+
+
+	hadoop jar /usr/lib/hadoop-mapreduce/hadoop-streaming.jar  -file /home/cloudera/matrixmultiply/mapper.py -mapper 'python mapper.py' -file /home/cloudera/matrixmultiply/reducer.py -reducer 'python 		reducer.py' -input /matrix/input.txt -output /matrix/outputmatrix
